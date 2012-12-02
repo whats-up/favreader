@@ -1,0 +1,46 @@
+doctype 5
+html
+	head
+		meta(charset='utf-8')
+		title= title
+		meta(name="viewport" ,content="width=device-width, initial-scale=1.0")
+
+		//link(rel='stylesheet', href='/stylesheets/vanilla.css')
+		link(href="/bootstrap/css/bootstrap.css", rel="stylesheet")
+		link(href="/bootstrap/css/bootstrap-responsive.css", rel="stylesheet")
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		//if lt IE 9
+			script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+		//--jQuery plugin-->
+		script(type="text/javascript", src="/bootstrap/js/bootstrap.min.js")
+		script(type="text/javascript", src="/js/plugin/jQuery.hashchange.event.1.3.js")
+		script(type="text/javascript", src="/js/plugin/jquery.tmpl.min.js")
+		script(type="text/javascript", src="/js/plugin/jquery.url.js")
+		script(type="text/javascript", src="/js/plugin/jquery.wookmark.min.js")
+	body
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+						span.icon-bar
+					a.brand(href='#')="fav reader ★彡"
+					.nav-collapse
+						ul.nav
+							li.active
+								a(href='#')
+									i.icon-home
+									|Home
+							li
+								a(href='#!/point')
+									i.icon-heart
+									|Point
+							li
+								a(href="#!/photo")
+									i.icon-camera
+									|Photo
+							li
+								a(href="#!/links")
+									i.icon-list
+									|Links
+	block content
